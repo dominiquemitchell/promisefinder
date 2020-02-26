@@ -1,0 +1,51 @@
+body {
+  padding: 2%;
+}
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  color: #0c616e;
+  font-weight: 800;
+}
+
+h5 {
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  font-weight: 600;
+  color: #0c616e;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: #0c616e;
+  padding: 10px 50px;
+}
+
+aside {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  text-align: center;
+  color: #0c616e;
+  padding: 10px 50px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #0c616e;
+  color: white;
+  text-align: center;
+}
+
+.footer p {
+  color: white;
+  margin-bottom: 0;
+}
+
+.second-row {
+  margin-bottom: 60px;
+}

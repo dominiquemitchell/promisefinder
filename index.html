@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <title>Promise Finder</title>
+  </head>
+  <body>
+    <!-- Figure out how to make the cards appropriately responsive. Investigate col-sm-4...I think that may have something to do with it -->
+    <header>
+      <h1>Promise Finder</h1>
+      <p>Select an emotion and read what God says about it!</p>
+    </header>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md">
+          <div class="mx-auto h-100 card" style="width: 18rem;">
+            <img
+              class="card-img-top"
+              src="img/happy.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body bg-light">
+              <h5 class="card-title">Happy</h5>
+              <p class="card-text">
+                Feeling happiness in your life?
+              </p>
+              <div class="text-center">
+                <button
+                  type="button"
+                  class="btn btn-info"
+                  data-toggle="modal"
+                  data-target="#happyModal"
+                >
+                  View Happy Promises
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="mx-auto h-100 card" style="width: 18rem;">
+            <img
+              class="card-img-top"
+              src="img/grateful.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body bg-light">
+              <h5 class="card-title">Grateful</h5>
+              <p class="card-text">
+                Feeling grateful?
+              </p>
+              <div class="text-center">
+                <button
+                  type="button"
+                  class="btn btn-info"
+                  data-toggle="modal"
+                  data-target="#gratefulModal"
+                >
+                  View Grateful Promises
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="mx-auto h-100 card" style="width: 18rem;">
+            <img
+              class="card-img-top"
+              src="img/loved.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body bg-light">
+              <h5 class="card-title">Loved</h5>
+              <p class="card-text">
+                Need a reminder of God's love?
+              </p>
+              <div class="text-center">
+                <button
+                  type="button"
+                  class="btn btn-info"
+                  data-toggle="modal"
+                  data-target="#lovedModal"
+                >
+                  View Love Promises
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="mx-auto h-100 card" style="width: 18rem;">
+            <img
+              class="card-img-top"
+              src="img/joyful.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body bg-light">
+              <h5 class="card-title">Joyful</h5>
+              <p class="card-text">
+                Do you have joy in your heart?
+              </p>
+              <div class="text-center">
+                <button
+                  type="button"
+                  class="btn btn-info"
+                  data-toggle="modal"
+                  data-target="#joyfulModal"
+                >
+                  View Joyful Promises
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid second-row">
+      <div class="row pt-4">
+        <div class="col-md">
+          <div class="mx-auto h-100 card" style="width: 18rem;">
+            <img
+              class="card-img-top"
+              src="img/anxious.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body bg-light">
+              <h5 class="card-title">Anxious</h5>
+              <p class="card-text">
+                Feeling anxious?
+              </p>
+              <div class="text-center">
+                <button
+                  type="button"
+                  class="btn btn-info"
+                  data-toggle="modal"
+                  data-target="#anxiousModal"
+                >
+                  View Promises for Anxiety
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="mx-auto h-100 card" style="width: 18rem;">
+            <img
+              class="card-img-top"
+              src="img/afraid.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body bg-light">
+              <h5 class="card-title">Afraid</h5>
+              <p class="card-text">
+                Are you afraid?
+              </p>
+              <div class="text-center">
+                <button
+                  type="button"
+                  class="btn btn-info"
+                  data-toggle="modal"
+                  data-target="#afraidModal"
+                >
+                  View Promises for Fear
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="mx-auto h-100 card" style="width: 18rem;">
+            <img
+              class="card-img-top"
+              src="img/doubtful.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body bg-light">
+              <h5 class="card-title">Doubtful</h5>
+              <p class="card-text">
+                Is there doubt in your heart?
+              </p>
+              <div class="text-center">
+                <button
+                  type="button"
+                  class="btn btn-info"
+                  data-toggle="modal"
+                  data-target="#doubtfulModal"
+                >
+                  View Promises Regarding Doubt
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="mx-auto h-100 card" style="width: 18rem;">
+            <img class="card-img-top" src="img/sad.jpg" alt="Card image cap" />
+            <div class="card-body bg-light">
+              <h5 class="card-title">Sad</h5>
+              <p class="card-text">
+                Feeling sad?
+              </p>
+              <div class="text-center">
+                <button
+                  type="button"
+                  class="btn btn-info"
+                  data-toggle="modal"
+                  data-target="#sadModal"
+                >
+                  View Promises for Sadness
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Happy Modal -->
+    <div
+      class="modal fade"
+      id="happyModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="happyModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="happyModalLabel">Happy Promises</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              <strong>Psalms 1:1-3 (CSB) - </strong>"How happy is the one who
+              does not walk in the advice of the wicked or stand in the pathway
+              with sinners or sit in the company of mockers! Instead, his
+              delight is in the Lord's instruction, and he meditates on it day
+              and night. He is like a tree planted beside flowing streams that
+              bears its fruit in its season, and its leaf does not wither.
+              Whatever he does prospers."
+            </p>
+            <p>
+              <strong>Psalms 37:4 (CSB) - </strong>"Take delight in the Lord,
+              and he will give you your heart's desires."
+            </p>
+            <p>
+              <strong>Ecclesiastes 3:13 (CSB) - </strong>"It is also the gift of
+              God whenever anyone eats, drinks, and enjoys all his efforts."
+            </p>
+            <aside>
+              Scripture quotations marked CSB have been taken from the Christian
+              Standard Bible®, Copyright © 2017 by Holman Bible Publishers. Used
+              by permission. Christian Standard Bible® and CSB® are federally
+              registered trademarks of Holman Bible Publishers.
+            </aside>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grateful Modal -->
+    <div
+      class="modal fade"
+      id="gratefulModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="gratefulModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="gratefulModalLabel">
+              Grateful Promises
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              <strong>Thessalonians 5:16-18 (CSB) - </strong>"Rejoice always,
+              pray constantly, give thanks in everything; for this is God's will
+              for you in Christ Jesus."
+            </p>
+            <p>
+              <strong>Colossians 3:17 (CSB) - </strong>"And whatever you do, in
+              word or in deed, do everything in the name of the Lord Jesus,
+              giving thanks to God the Father through him."
+            </p>
+            <p>
+              <strong>Psalms 75:1 (CSB) - </strong>"We give thanks to you, God;
+              we give thanks to you, for your name is near. People tell about
+              your wondrous works."
+            </p>
+            <aside>
+              Scripture quotations marked CSB have been taken from the Christian
+              Standard Bible®, Copyright © 2017 by Holman Bible Publishers. Used
+              by permission. Christian Standard Bible® and CSB® are federally
+              registered trademarks of Holman Bible Publishers.
+            </aside>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loved Modal -->
+    <div
+      class="modal fade"
+      id="lovedModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="lovedModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="lovedModalLabel">
+              Promises to Remind You the You're Loved
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              <strong>Romans 8:28 (CSB) - </strong>"We know that all things work
+              together for the good of those who love God, who are called
+              according to his purpose."
+            </p>
+            <p>
+              <strong>John 3:16 (CSB) - </strong>"For God loved the world in
+              this way: He gave his one and only Son, so that everyone who
+              believes in him will not perish but have eternal life."
+            </p>
+            <p>
+              <strong>Romans 8:38 (CSB) - </strong>"For I am persuaded that
+              neither death nor life, nor angels nor rulers, nor things present
+              nor things to come, nor powers, nor height nor depth, nor any
+              other created thing will be able to separate us from the love of
+              God that is in Christ Jesus our Lord."
+            </p>
+            <aside>
+              Scripture quotations marked CSB have been taken from the Christian
+              Standard Bible®, Copyright © 2017 by Holman Bible Publishers. Used
+              by permission. Christian Standard Bible® and CSB® are federally
+              registered trademarks of Holman Bible Publishers.
+            </aside>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Joyful Modal -->
+    <div
+      class="modal fade"
+      id="joyfulModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="joyfulModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="joyfulModalLabel">
+              Promises for Joy
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              <strong>Romans 15:13 (CSB) - </strong>"Now may the God of hope
+              fill you with all joy and peace as you believe so that you may
+              overflow with hope by the power of the Holy Spirit."
+            </p>
+            <p>
+              <strong>Psalms 28:7 (CSB) - </strong>"The Lord is my strength and
+              my shield; my heart trusts in him, and I am helped. Therefore my
+              heart celebrates, and I give thanks to him with my song."
+            </p>
+            <p>
+              <strong>Psalms 100:2 (CSB) - </strong>"Serve the Lord with
+              gladness; come before him with joyful songs."
+            </p>
+            <aside>
+              Scripture quotations marked CSB have been taken from the Christian
+              Standard Bible®, Copyright © 2017 by Holman Bible Publishers. Used
+              by permission. Christian Standard Bible® and CSB® are federally
+              registered trademarks of Holman Bible Publishers.
+            </aside>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Anxious Modal -->
+    <div
+      class="modal fade"
+      id="anxiousModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="anxiousModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="anxiousModalLabel">
+              Promises Against Anxiety
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              <strong>Philippians 4:6-7 (CSB) - </strong>"Don't worry about
+              anything, but in everything, through prayer and petition with
+              thanksgiving, present your requests to God. And the peace of God,
+              which surpasses all understanding, will guard your hearts and
+              minds in Christ Jesus."
+            </p>
+            <p>
+              <strong>Psalms 27:14 (CSB) - </strong>"Wait for the Lord; be
+              strong and let your heart be courageous. Wait for the Lord."
+            </p>
+            <p>
+              <strong>Psalms 37:4 (CSB) - </strong>"Take delight in the Lord,
+              and he will give you your heart's desires."
+            </p>
+            <aside>
+              Scripture quotations marked CSB have been taken from the Christian
+              Standard Bible®, Copyright © 2017 by Holman Bible Publishers. Used
+              by permission. Christian Standard Bible® and CSB® are federally
+              registered trademarks of Holman Bible Publishers.
+            </aside>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Afraid Modal -->
+    <div
+      class="modal fade"
+      id="afraidModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="afraidModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="afraidModalLabel">
+              Promises to Tackle Fear
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              <strong>2 Timothy 1:7 (CSB) - </strong>"For God has not given us a
+              spirit of fear, but one of power, love, and sound judgment."
+            </p>
+            <p>
+              <strong>Isaiah 41:10 (CSB) - </strong>"Do not fear, for I am with
+              you; do not be afraid, for I am your God. I will strengthen you; I
+              will help you; I will hold on to you with my righteous right
+              hand."
+            </p>
+            <p>
+              <strong>Psalms 23:4 (CSB) - </strong>"Even when I go through the
+              darkest valley, I fear no danger, for you are with me; your rod
+              and your staff--they comfort me."
+            </p>
+            <aside>
+              Scripture quotations marked CSB have been taken from the Christian
+              Standard Bible®, Copyright © 2017 by Holman Bible Publishers. Used
+              by permission. Christian Standard Bible® and CSB® are federally
+              registered trademarks of Holman Bible Publishers.
+            </aside>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Doubtful Modal -->
+    <div
+      class="modal fade"
+      id="doubtfulModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="doubtfulModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="doubtfulModalLabel">
+              Promises to Defeat Doubt
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              <strong>John 14:1 (CSB) - </strong>"Don't let your heart be
+              troubled. Believe in God; believe also in me."
+            </p>
+            <p>
+              <strong>Mark 11:22-24 (CSB) - </strong>"Jesus replied to them,
+              'Have faith in God. Truly I tell you, if anyone says to this
+              mountain, 'Be lifted up and thrown into the sea,' and does not
+              doubt in his heart, but believes that what he says will happen, it
+              will be done for him. Therefore I tell you, everything you pray
+              and ask for--believe you have received it and it will be yours.'"
+            </p>
+            <p>
+              <strong>John 6:47 (CSB) - </strong>"Truly I tell you, anyone who
+              believes has eternal life."
+            </p>
+            <aside>
+              Scripture quotations marked CSB have been taken from the Christian
+              Standard Bible®, Copyright © 2017 by Holman Bible Publishers. Used
+              by permission. Christian Standard Bible® and CSB® are federally
+              registered trademarks of Holman Bible Publishers.
+            </aside>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sad Modal -->
+    <div
+      class="modal fade"
+      id="sadModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="sadModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="sadModalLabel">
+              Promises to Overcome Sadness
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              <strong>Matthew 5:4 (CSB) - </strong>"Blessed are those who mourn,
+              for they will be comforted."
+            </p>
+            <p>
+              <strong>Psalms 34:18 (CSB) - </strong>"The Lord is near the
+              brokenhearted; he saves those crushed in spirit."
+            </p>
+            <p>
+              <strong>Romans 8:18 (CSB) - </strong>"For I consider that the
+              sufferings of this present time are not worth comparing with the
+              glory that is going to be revealed to us."
+            </p>
+            <aside>
+              Scripture quotations marked CSB have been taken from the Christian
+              Standard Bible®, Copyright © 2017 by Holman Bible Publishers. Used
+              by permission. Christian Standard Bible® and CSB® are federally
+              registered trademarks of Holman Bible Publishers.
+            </aside>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Promise Finder &copy;2020</p>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="promises.js"></script>
+  </body>
+</html>
